@@ -1,0 +1,26 @@
+{
+  "name": "express-jwt",
+  "version": "1.0.0",
+  "description": "An express REST API boilerplate with JWT authentication",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "@udz-codes",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.0",
+    "joi": "^17.10.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.12.0"
+  }
+}
