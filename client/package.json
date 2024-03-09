@@ -1,0 +1,51 @@
+{
+	"name": "Biolink-frontend",
+	"version": "1.0.0",
+	"description": "Client Repository of Aracadia",
+	"scripts": {
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx|json)\"",
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"yarn format",
+			"yarn lint"
+		]
+	},
+	"author": "Delta Force",
+	"license": "ISC",
+	"dependencies": {
+		"@emotion/react": "^11.10.5",
+		"@mantine/core": "^7.6.1",
+		"@mantine/hooks": "^7.6.1",
+		"@reduxjs/toolkit": "^2.2.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-error-boundary": "^4.0.13",
+		"react-helmet": "^6.1.0",
+		"react-redux": "^9.1.0",
+		"react-router-dom": "^6.5.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.9",
+		"@types/react-helmet": "^6.1.6",
+		"@typescript-eslint/eslint-plugin": "^7.1.1",
+		"@typescript-eslint/parser": "^7.1.1",
+		"@vitejs/plugin-react": "^4.2.1",
+		"autoprefixer": "^10.4.13",
+		"eslint": "^8.30.0",
+		"eslint-plugin-react": "^7.31.11",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"postcss": "^8.4.20",
+		"prettier": "^3.2.5",
+		"tailwindcss": "^3.2.4",
+		"typescript": "^5.4.2",
+		"vite": "^5.1.5"
+	}
+}
