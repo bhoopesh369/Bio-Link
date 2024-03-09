@@ -25,6 +25,7 @@ app.use(limiter);
 app.use("/", homeRoutes);
 app.use("/api/private", privateRoutes);
 app.use("/api/user", authRoutes);
+app.use("/api/network", networkRoutes);
 // -> Example Routes
 app.use(`${EXAMPLES_ROUTE}/pagination`, paginationExample);
 

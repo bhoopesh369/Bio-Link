@@ -1,5 +1,7 @@
-# Overview
-To run the solution, we will first need to clone our repository. Once the repository was cloned, we should have two folders in your directory and a readme file: 
+#  Bio-Link Healthcare Blockchain Network (TRI-NIT Hackathon 2024)
+
+## Overview
+To run the solution, we will first need to clone our repository. Once the repository was cloned, we should have two folders with below names in your directory and a readme file: 
 1)	**chaincode-healthcare:** It contains the chaincode project.
 2)	**fabric-network:** It contains the console application project, along with detailed instructions on how to setup the environment and the network.
 3)	**README:** It contains a step-by-step example to run the solution. 
@@ -104,7 +106,7 @@ To use the Healthcare network to manage the blockchain we must invoke the chainc
 
 Where **healthcare** is the chaincode name and **USER** is the invoking user that belongs to the **ORG** organization on channel1 channel. Finally, we have the **FCN_CALL** argument which is a string composed by the method to be invoked and its required parameters. From now on, we will call this console command as *invoke command*.
 
-### EMR Managing
+### Medical Records Managing
 
 #### Create EMR
 Execute the *invoke command* with the following values:
