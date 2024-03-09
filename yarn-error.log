@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add react-parallax-til
+
+PATH: 
+  /home/sriman/go/bin:/usr/local/go/bin:/home/sriman/.vscode-server/bin/1e790d77f81672c49be070e04474901747115651/bin/remote-cli:/home/sriman/.local/bin:/home/sriman/.cargo/bin:/home/sriman/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.1.4.0_x64__8wekyb3d8bbwe:/mnt/c/Program Files/Microsoft MPI/Bin/:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.3/libnvvp:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/Tesseract-OCR:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/kssri/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/java/jdk/bin:/mnt/c/java/jre/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.3.1/:/mnt/c/Users/kssri/AppData/Local/NVIDIA/ChatWithRTX/env_nvd_rag/Lib/site-packages/torch/lib:/Docker/host/bin:/mnt/c/Users/kssri/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/kssri/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/MinGW/bin:/mnt/c/Users/kssri/go/bin:/mnt/c/Users/kssri/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/Program Files/Tesseract-OCR:/mnt/c/Users/kssri/AppData/Local/Programs/Hyper/resources/bin:/mnt/c/Users/kssri/AppData/Roaming/npm:/mnt/c/Program Files/nodejs:/mnt/c/Users/kssri/.dotnet/tools:/mnt/c/Users/kssri/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts:/mnt/c/java/jre/bin:/mnt/c/java/jre/jre/bin:/mnt/c/hadoop-3.3.6/hadoop-3.3.6/bin:/mnt/c/hadoop-3.3.6/hadoop-3.3.6/sbin:/mnt/c/Users/kssri/AppData/Local/Programs/Microsoft VS Code Insiders/bin:/snap/bin:/usr/local/go/bin:/usr/local/go/bin:/go/bin:/go/pkg:/home/sriman/bin/:/home/sriman/go/bin:/usr/local/go/bin:/go/bin:/go/pkg:/home/sriman/bin/:/home/sriman/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.3.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/react-parallax-til: Not found
+      at params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:511:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:511:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:625:28)
+      at IncomingMessage.emit (node:events:523:35)
+      at endReadableNT (node:internal/streams/readable:1367:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
