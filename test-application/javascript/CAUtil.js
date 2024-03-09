@@ -6,8 +6,8 @@
 
 'use strict';
 
-const adminUserId = 'admin';
-const adminUserPasswd = 'adminpw';
+const adminUserId = 'mp1';
+const adminUserPasswd = 'pass123';
 
 /**
  *
@@ -16,7 +16,9 @@ const adminUserPasswd = 'adminpw';
  */
 exports.buildCAClient = (FabricCAServices, ccp, caHostName) => {
 	// Create a new CA client for interacting with the CA.
+	console.log(ccp.certificateAuthorities);
 	const caInfo = ccp.certificateAuthorities[caHostName]; //lookup CA details from config
+	console.log(caInfo);
 	const caTLSCACerts = caInfo.tlsCACerts.pem;
 	const caClient = new FabricCAServices(caInfo.url, { trustedRoots: caTLSCACerts, verify: false }, caInfo.caName);
 
@@ -27,7 +29,9 @@ exports.buildCAClient = (FabricCAServices, ccp, caHostName) => {
 exports.enrollAdmin = async (caClient, wallet, orgMspId) => {
 	try {
 		// Check to see if we've already enrolled the admin user.
+		console.log('adminUserId: ', adminUserId);
 		const identity = await wallet.get(adminUserId);
+		console.log(identity);
 		if (identity) {
 			console.log('An identity for the admin user already exists in the wallet');
 			return;

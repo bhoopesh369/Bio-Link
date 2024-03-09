@@ -12,9 +12,9 @@ const path = require('path');
 const { buildCAClient, registerAndEnrollUser, enrollAdmin } = require('../test-application/javascript/CAUtil.js');
 const { buildCCPOrg1, buildWallet } = require('../test-application/javascript/AppUtil.js');
 
-const channelName = 'mychannel';
-const chaincodeName = 'basic';
-const mspOrg1 = 'Org1MSP';
+const channelName = 'channel1';
+const chaincodeName = 'healthcare';
+const mspOrg1 = 'medicalprovider1';
 const walletPath = path.join(__dirname, 'wallet');
 const org1UserId = 'appUser';
 
@@ -72,14 +72,22 @@ function prettyJSONString(inputString) {
 async function main() {
 	try {
 		// build an in memory object with the network configuration (also known as a connection profile)
-		const ccp = buildCCPOrg1();
+		const ccp = await buildCCPOrg1();
 
+		console.log(ccp,"hif rom ehre")
+
+		console.log("buildCCPOrg1 done")
+		
 		// build an instance of the fabric ca services client based on
 		// the information in the network configuration
-		const caClient = buildCAClient(FabricCAServices, ccp, 'ca.org1.example.com');
+		const caClient = buildCAClient(FabricCAServices, ccp, 'ca.medicalprovider1');
 
+		console.log('ommala')
+		
 		// setup the wallet to hold the credentials of the application user
 		const wallet = await buildWallet(Wallets, walletPath);
+
+		console.log('wallet done')
 
 		// in a real application this would be done on an administrative flow, and only once
 		await enrollAdmin(caClient, wallet, mspOrg1);
@@ -98,11 +106,16 @@ async function main() {
 			// The user will now be able to create connections to the fabric network and be able to
 			// submit transactions and query. All transactions submitted by this gateway will be
 			// signed by this user using the credentials stored in the wallet.
+
+			console.log('Establishing connection to the network');
+
 			await gateway.connect(ccp, {
 				wallet,
 				identity: org1UserId,
-				discovery: { enabled: true, asLocalhost: true } // using asLocalhost as this gateway is using a fabric network deployed locally
+				discovery: { enabled: true, asLocalhost: true }, // using asLocalhost as this gateway is using a fabric network deployed locally
 			});
+
+			console.log("hi")
 
 			// Build a network instance based on the channel where the smart contract is deployed
 			const network = await gateway.getNetwork(channelName);
