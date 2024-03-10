@@ -10,7 +10,7 @@
   "author": "@udz-codes",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
