@@ -22,12 +22,11 @@ router.post('/register', async (req, res) => {
 
     // Hash the password
     const salt = bcrypt.genSaltSync(10);
-    console.log(salt);
     const hashedPassword = bcrypt.hashSync(req.body.password, 10);
 
     let user;
 
-    user = User({
+    user = new User({
         username: req.body.username,
         password: hashedPassword
     });
@@ -52,11 +51,12 @@ router.post('/register', async (req, res) => {
     }
 
     try {
-        const newUser = await user.save()
+        const newUser = await user.save();
         res.send({ user: newUser._id });
     } catch (error) {
-        res.send({ message: error })
+        res.status(500).send({ message: "Error occurred while saving user", error: error });
     }
+
 })
 
 router.post('/login', async (req, res) => {
@@ -71,7 +71,7 @@ router.post('/login', async (req, res) => {
         if (!passwordMatch) return res.status(400).send('username or Password do not match');
 
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
-        res.header('auth-token', token).send(token);
+        return res.status(200).send({ token: token, user: user });
     }
     else if (role.toLowerCase() === 'doctor') {
         console.log(username);
@@ -121,7 +121,7 @@ router.post('/login', async (req, res) => {
         }
     }
     else {
-        res.status(400).send('Invalid role');
+        return res.status(400).send('Invalid role');
     }
     if (user) {
         const accessToken = generateAccessToken(username, role);
@@ -135,7 +135,7 @@ router.post('/login', async (req, res) => {
             return res.json({ accessToken, refreshToken, user });
         }
     } else {
-        res.status(400).send('Invalid username or password');
+        return res.status(400).send('Invalid username or password');
     }
 }
 )
