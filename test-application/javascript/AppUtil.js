@@ -9,60 +9,30 @@
 const fs = require('fs');
 const path = require('path');
 
-// exports.buildCCPOrg1 = async () => {
-// 	// load the common connection configuration file
-// 	const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'medicalprovider1', 'connection-medicalprovider1.json');
-// 	const fileExists = fs.existsSync(ccpPath);
-// 	if (!fileExists) {
-// 		throw new Error(`no such file or directory: ${ccpPath}`);
-// 	}
-
-// 	let finalData;
-
-//     fs.readFileSync(ccpPath, 'utf8', (err, data) => {
-// 		if (err) {
-// 		  console.error(`Error reading the file: ${err}`);
-// 		  return;
-// 		}
-	  
-// 		// Parse the JSON data
-// 		try {
-// 		  finalData = JSON.parse(data);
-// 		  console.log(finalData);
-// 		  return finalData;
-		  
-// 		} catch (jsonError) {
-// 			console.error(`Error parsing JSON: ${jsonError}`);
-// 		  return undefined;
-// 		}
-// 	});
-
-// 	return undefined;
-// };
 
 const util = require('util');
 
 const readFileAsync = util.promisify(fs.readFile);
 
-exports.buildCCPOrg1 = async () => {
-  const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'medicalprovider1', 'connection-medicalprovider1.json');
-  const fileExists = fs.existsSync(ccpPath);
+exports.buildCCPHosp1 = async () => {
+	const ccpPath = path.resolve(__dirname, '..', '..', 'test-network', 'organizations', 'peerOrganizations', 'medicalprovider1', 'connection-medicalprovider1.json');
+	const fileExists = fs.existsSync(ccpPath);
 
-  if (!fileExists) {
-    throw new Error(`no such file or directory: ${ccpPath}`);
-  }
+	if (!fileExists) {
+		throw new Error(`no such file or directory: ${ccpPath}`);
+	}
 
-  try {
-    const data = await readFileAsync(ccpPath, 'utf8');
-    const finalData = JSON.parse(data);
-    return finalData;
-  } catch (error) {
-    console.error(`Error reading/parsing the file: ${error}`);
-    return undefined;
-  }
+	try {
+		const data = await readFileAsync(ccpPath, 'utf8');
+		const finalData = JSON.parse(data);
+		return finalData;
+	} catch (error) {
+		console.error(`Error reading/parsing the file: ${error}`);
+		return undefined;
+	}
 }
 
-exports.buildCCPOrg2 = () => {
+exports.buildCCPHosp2 = () => {
 	// load the common connection configuration file
 	const ccpPath = path.resolve(__dirname, '..', '..', 'test-network',
 		'organizations', 'peerOrganizations', 'medicalprovider2', 'connection-medicalprovider2.json');
