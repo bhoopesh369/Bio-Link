@@ -8,6 +8,7 @@ require("dotenv/config"); // Environment variables
 // Route imports
 const homeRoutes = require("./routes/home");
 const authRoutes = require("./routes/auth");
+const networkRoutes = require("./routes/network");
 const privateRoutes = require("./routes/privateRoutes");
 
 const limiter = require("./middlewares/rateLimiter");
