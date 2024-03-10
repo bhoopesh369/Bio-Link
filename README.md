@@ -1,5 +1,8 @@
 #  Bio-Link Healthcare Blockchain Network (TRI-NIT Hackathon 2024)
 
+## Video Presentation
+[[ Watch the video in here ](https://drive.google.com/drive/folders/1MZBInjlwFz_71R69ZiXIMPfjLhLpx2Tj?usp=sharing)]
+
 ## Overview
 To run the solution, we will first need to clone our repository. Once the repository was cloned, we should have two folders with below names in your directory and a readme file: 
 1)	**chaincode-healthcare:** It contains the chaincode project.

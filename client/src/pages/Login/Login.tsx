@@ -19,6 +19,7 @@ const Login = () => {
 	};
 
 	const apiCall = async () => {
+		navigate("/doctors");
 		if (!username || !password || !hospitalId || !role) {
 			return;
 		}

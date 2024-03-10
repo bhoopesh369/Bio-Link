@@ -3,8 +3,11 @@ import axios from "axios"; // Make sure to install axios: npm install axios
 import styles from "./doctor.module.css";
 import logo from "../../../public/assets/logo.png";
 import Tilt from "react-parallax-tilt";
+import { useNavigate } from "react-router-dom";
 
 const Doctors = () => {
+
+  const navigate = useNavigate();
   const doctorsData = [
     { id: 1, name: "Doctor 1", description: "Experienced in internal medicine." },
     { id: 2, name: "Doctor 2", description: "Specialized in cardiology." },
@@ -30,6 +33,7 @@ const Doctors = () => {
 
   // Function to handle "Make Appointment" button click
   const handleMakeAppointment = async (doctorId:number) => {
+	// navigate("/report");
     try {
       // Send a POST request to your backend with the doctorId and appointmentTime
       const response = await axios.post("/api/makeAppointment", {

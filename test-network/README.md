@@ -87,18 +87,7 @@ After all these steps, the network is set and ready to be utilized by the organi
 
 # Network Scripts
 
-The scripts folder contains bash scripts to automate the network setup.
-The scripts are the following.
-
-- [install](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/install.sh)
-- [createNetwork](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/createNetwork.sh)
-- [createChannel](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/createChannel.sh)
-- [joinOrganizations](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/joinOrganizations.sh)
-- [deploycc](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/deploycc.sh)
-- [createUser](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/createUser.sh)
-- [addOrganization](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/addOrganization.sh)
-- [addPeer](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/addPeer.sh)
-- [joinPeerToChannel](https://github.com/southworks/skadar/blob/main/dev/fabric-network/scripts/joinPeerToChannel.sh)
+The scripts folder contains bash scripts to automate the network setup
 
 All these scripts can be managed by using a main script called **bc-network.sh**
 
