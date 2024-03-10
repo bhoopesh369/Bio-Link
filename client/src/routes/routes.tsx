@@ -1,6 +1,7 @@
 import React from "react";
 import "./types.d";
 import { Dashboard, Login, Doctor } from "../pages";
+import Patients from "../pages/Patients/Patients";
 
 export const publicRoutes: RouteType[] = [
 	{
@@ -13,6 +14,13 @@ export const publicRoutes: RouteType[] = [
 	{
 		path: "/doctors",
 		element: <Doctor />,
+		title: "Doctors",
+		description: "Doctors Page of Biolink",
+	},
+
+	{
+		path: "/patients",
+		element: <Patients />,
 		title: "Doctors",
 		description: "Doctors Page of Biolink",
 	},
